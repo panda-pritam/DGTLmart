@@ -10,14 +10,32 @@ import { enqueueSnackbar } from "notistack";
 
 export default function Header({ setList, setLoading }) {
   let [text, setText] = useState("");
+  let [timer, setTimer] = useState("");
   //   let Snackbar = enqueueSnackbar();
   useEffect(() => {
     console.log("page loaded");
     setLoading(true);
-    (async () => {
-      if (text.length == 0) {
+    // (async () => {
+    //   if (text.length == 0) {
+
+    //   }
+    // })();
+    if (timer) {
+      clearTimeout(timer);
+    }
+    let timerid = setTimeout(() => {
+      (async () => {
         try {
-          let list = await axios(`https://dgtlmart-2.onrender.com/v1/videos`);
+          setLoading(true);
+          let list;
+
+          if (text.length > 0) {
+            list = await axios(
+              `https://dgtlmart-2.onrender.com/v1/videos?title=${text}`
+            );
+          } else {
+            list = await axios(`https://dgtlmart-2.onrender.com/v1/videos`);
+          }
           console.log(list.data.videos);
           setList(list.data.videos);
           setLoading(false);
@@ -25,8 +43,9 @@ export default function Header({ setList, setLoading }) {
           enqueueSnackbar("Some Thing went worng", { variant: "error" });
           setLoading(false);
         }
-      }
-    })();
+      })();
+    }, 300);
+    setTimer(timerid);
   }, [text]);
   let onSubmitHandle = async (e) => {
     e.preventDefault();

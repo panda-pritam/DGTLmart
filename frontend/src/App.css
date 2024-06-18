@@ -3,25 +3,30 @@
 }
 
 .Header {
-  box-sizing: border-box;
-  width: 100%;
-  height: 55px !important;
+  /* box-sizing: border-box; */
+  width: 98%;
+  height: 60px !important;
   border-bottom: 1px solid black;
   padding: 1rem;
+  /* margin-bottom: 1rem; */
 }
 .Header form {
-  height: 50px;
+  height: 55px;
   width: 60%;
   border: 1px solid black;
+  overflow: hidden;
 }
 .Header input {
   box-sizing: border-box;
-  height: px;
+  height: 52px;
   padding: 1rem;
-  width: 95%;
+  width: 92%;
   border: none;
 }
 .Header input:focus,
 input:focus {
   outline: none;
+}
+.GridDiv {
+  margin-top: 1rem;
 }

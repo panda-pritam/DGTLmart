@@ -8,7 +8,7 @@ import GenerateGridItem from "./genrateGridItem";
 
 export default function VideosGrid({ list, loading }) {
   return (
-    <div>
+    <div className="GridDiv">
       {loading ? (
         <Box
           sx={{
