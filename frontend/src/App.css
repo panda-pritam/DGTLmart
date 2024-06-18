@@ -3,6 +3,7 @@
 }
 
 .Header {
+  box-sizing: border-box;
   width: 100%;
   height: 55px !important;
   border-bottom: 1px solid black;
