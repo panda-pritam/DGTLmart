@@ -1,0 +1,26 @@
+{
+  "name": "dgtlmart",
+  "version": "1.0.0",
+  "description": "DGTLmart assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "author": "Pritam mondal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http-status": "^1.7.4",
+    "joi": "^17.13.1",
+    "mongodb": "3.7",
+    "mongoose": "^8.4.3",
+    "mongoose-validator": "^2.1.0",
+    "nodemon": "^3.1.3",
+    "validator": "^13.0.0",
+    "core-js": "^3.0.0",
+    "cors": "^2.8.5"
+  }
+}
